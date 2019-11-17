@@ -6,4 +6,13 @@
 
 module.exports = {
   /* Your site config here */
+  plugins: [
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`
+  ],
+  siteMetadata: {
+    title: 'HandelBay red social empresarial',
+    url: 'https://handelbay.com',
+    description: 'HandelBay, marketplace empresarial. Encuentra proveedores de, papelería, tecnología, mobiliario, aseo, publicidad, textiles, agroindustria y más.'
+  }
 }

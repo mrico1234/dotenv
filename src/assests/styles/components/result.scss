@@ -1,0 +1,77 @@
+.result-container {
+	border: 1px solid gray;
+	@include grid;
+	grid-template-areas: "image title . button" "image text text button";
+	gap: $space;
+	justify-items: center;
+	margin: 30px 0;
+	& span {
+		font-weight: $bolder;
+	}
+	@include respond-to(768px) {
+		grid-template-areas: "image image image title" "text text text text" "button button button button";
+	}
+}
+
+.result-image {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	grid-area: image;
+}
+
+.result-container-text {
+	grid-area: text;
+}
+
+.result-title {
+	grid-area: title;
+	font-size: $h2;
+	font-weight: $bolder;
+	color: $blue-brand;
+	margin: .5em;
+}
+
+.result-type {
+	font-size: $h3;
+	text-transform: uppercase;
+	color: $green-brand;
+	margin: .5em;
+}
+
+.result-sector,
+.result-description,
+.result-location {
+	font-size: $h4;
+	margin: .5em;
+}
+
+.result-buttons {
+	@include grid;
+	grid-template-columns: 1fr 1fr;
+	gap: $space;
+	justify-content: space-between;
+	align-self: center;
+	grid-area: button;
+	@include respond-to(1024px) {
+		grid-template: 1fr / 1fr;
+	}
+	@include respond-to(768px) {
+		margin: $space 0;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.result-button_add {
+	background-color: $green-brand;
+	font-size: $h3;
+	outline: none;
+	cursor: pointer;
+}
+
+.result-button_message {
+	background: none;
+	font-size: $h3;
+	outline: none;
+	cursor: pointer;
+}

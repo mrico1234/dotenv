@@ -1,0 +1,41 @@
+.container-results {
+	@include max-width(1000px);
+	margin-top: $space * 3;
+}
+
+.one-row {
+	@include grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+	border-bottom: 1px solid gray;
+}
+
+.number-results {
+	font-weight: $bolder;
+}
+
+.ver-todas {
+	font-weight: $bolder;
+	justify-self: end;
+	cursor: pointer;
+}
+
+.results-container_result {
+	height: 70vh;
+	overflow: auto;
+}
+
+@media screen and (max-width: 1024px) {
+	.container-results {
+		@include max-width(90%);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container-results {
+		@include max-width(95%);
+	}
+}
+
+@media screen and (max-width: 480px) {
+}

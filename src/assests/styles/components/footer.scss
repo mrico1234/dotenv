@@ -1,0 +1,13 @@
+.footer-container-logos {
+	display: flex;
+	justify-content: center;
+	margin-top: $space * 3;
+	& img {
+		color: $blue-brand;
+		cursor: pointer;
+	}
+}
+
+.text-footer {
+	text-align: center;
+}

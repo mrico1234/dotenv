@@ -1,0 +1,35 @@
+.container-selector {
+	@include max-width(900px);
+	@include grid;
+	grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+	grid-gap: 5px;
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
+	margin-top: $space * 3;
+	& button {
+		cursor: pointer;
+		outline: none;
+		width: 100%;
+		border: none;
+		border-bottom: 2px solid $green-brand;
+		font-size: $h3;
+		color: gray;
+	}
+	& figure {
+		display: grid;
+		gap: 2px;
+		grid-template-columns: auto 1fr;
+		margin: 0;
+		padding: 0;
+		& img {
+			align-self: center;
+		}
+	}
+	@include respond-to(1024px) {
+		@include max-width(85%);
+	}
+	@include respond-to(480px) {
+		@include max-width(95%);
+	}
+}

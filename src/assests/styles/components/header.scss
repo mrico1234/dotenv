@@ -1,0 +1,103 @@
+.Header {
+	@include grid;
+	@include max-width(1000px);
+	grid-template-columns: 1fr 2fr;
+	justify-content: center;
+	margin-top: $space;
+	& nav {
+		justify-content: end;
+		& ul {
+			margin: 0;
+			& li {
+				margin-top: $space;
+				list-style: none;
+				& a{
+					text-decoration: none;
+				
+				}
+			}
+		}
+	}
+	@include respond-to(1024px) {
+		@include max-width(90%);
+		margin-top: $space;
+	}
+	@include respond-to(480px) {
+		@include max-width(95%);
+		margin-top: $space;
+	}
+}
+
+.Header-logo {
+	height: 60px;
+	@include respond-to(1024px) {
+		height: 40px;
+	}
+}
+
+.Header-buttons {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: end;
+}
+
+.Header-button {
+	@include button-rounder;
+	padding: $space;
+	background-color: $blue-brand;
+	color: white;
+	font-weight: $medium;
+	font-size: $h4;
+	outline: none;
+	cursor: pointer;
+	@include respond-to(480px) {
+		padding: $space / 2;
+		font-size: $p;
+	}
+
+
+}
+
+.Header-button2{
+	@include button-rounder;
+	padding: $space;
+	border: 1px solid $blue-brand;
+	margin-left: $space;
+	font-size: $h4;
+	color: $blue-brand;
+	font-weight: $medium;
+	outline: none;
+	cursor: pointer;
+	@include respond-to(480px){
+		padding: $space / 2;
+		margin-left: $space / 2;
+		font-size: $p;
+	}
+}
+
+.titles {
+	@include max-width(1000px);
+	margin-top: $space * 3;
+	margin-bottom: $space * 3;
+	& p {
+		font-size: $h1;
+		margin: 0;
+		color: $blue-brand;
+		& span {
+			font-weight: $bolder;
+		}
+	}
+	@include respond-to(1024px) {
+		@include max-width(90%);
+		margin-top: $space * 2;
+		margin-bottom: $space * 2;
+		& p {
+			font-size: $h2;
+		}
+	}
+	@include respond-to(480px) {
+		@include max-width(95%);
+		margin-top: $space;
+		margin-bottom: $space;
+	}
+}

@@ -1,0 +1,32 @@
+//   #    # # #    # # #    #  ####
+//   ##  ## #  #  #  # ##   # #
+//   # ## # #   ##   # # #  #  ####
+//   #    # #   ##   # #  # #      #
+//   #    # #  #  #  # #   ## #    #
+//   #    # # #    # # #    #  ####
+//
+
+@mixin max-width($max-width: 800px) {
+	max-width: $max-width;
+	margin: auto;
+}
+
+//@include max-width(1200px);
+
+@mixin respond-to($width) {
+	@media only screen and (max-width: $width) {
+		@content;
+	}
+}
+
+// 1024
+// 768
+// 480
+
+@mixin grid {
+	display: grid;
+}
+
+@mixin button-rounder {
+	border-radius: 40px;
+}
