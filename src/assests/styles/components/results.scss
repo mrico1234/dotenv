@@ -1,6 +1,7 @@
 .container-results {
 	@include max-width(1000px);
 	margin-top: $space * 3;
+	display: grid;
 }
 
 .one-row {

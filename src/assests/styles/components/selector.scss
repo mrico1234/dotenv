@@ -8,6 +8,7 @@
 	justify-items: center;
 	margin-top: $space * 3;
 	& button {
+		background: $white-brand;
 		cursor: pointer;
 		outline: none;
 		width: 100%;

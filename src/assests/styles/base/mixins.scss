@@ -30,3 +30,7 @@
 @mixin button-rounder {
 	border-radius: 40px;
 }
+
+@mixin shadow {
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16), 0px 2px 10px rgba(0, 0, 0, 0.12);
+}
