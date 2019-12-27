@@ -1,0 +1,114 @@
+.result-container {
+	border: 1px solid gray;
+	background: white;
+	@include grid;
+	@include max-width(90%);
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas: "image title title button" "image text text button";
+	column-gap: $space * 2;
+	justify-content: start;
+	margin: $space 0;
+	margin-left: 2.5%;
+	padding: $space * 2;
+	@include shadow;
+	& span {
+		font-weight: $bolder;
+	}
+	@include respond-to(768px) {
+		grid-template-areas: "image title title" "text text text" "button button button";
+	}
+}
+
+.result-image {
+	height: 130px;
+	width: 180px;
+	align-self: center;
+	object-fit: center;
+	grid-area: image;
+
+	& img {
+		height: 130px;
+		width: 180px;
+	}
+	@include respond-to(768px) {
+		height: 80px;
+		width: 100px;
+	}
+}
+
+.result-container-text {
+	grid-area: text;
+}
+
+.result-title {
+	grid-area: title;
+	font-size: $h2;
+	font-weight: $bolder;
+	color: $blue-brand;
+	margin: 0 .5em .2em .5em;
+}
+
+.result-type {
+	font-size: $h3;
+	text-transform: uppercase;
+	color: $green-brand;
+	margin: .5em;
+}
+
+.result-text {
+	font-size: $h4;
+	margin: .5em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.result-buttons {
+	@include grid;
+	grid-template-columns: 1fr;
+	gap: $space;
+	align-self: center;
+
+	grid-area: button;
+	@include respond-to(1024px) {
+		grid-template: 1fr;
+	}
+	@include respond-to(768px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.result-button_add {
+	background-color: $green-brand;
+	font-size: $h3;
+	outline: none;
+	cursor: pointer;
+}
+
+.buyer {
+	color: $buyer_color;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	text-transform: uppercase;
+
+}
+.provider {
+	color: $provider_color;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	
+	text-transform: uppercase;
+	
+}
+.dual {
+	color: $dual_color;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	
+	text-transform: uppercase;
+	
+}
+
+.bg_buyer {
+	background: $buyer_color;
+}

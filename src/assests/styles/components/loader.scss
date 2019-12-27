@@ -1,0 +1,35 @@
+@import '../tokens/colors.scss';
+$border_color_1: $green_brand transparent $green_brand transparent;
+
+@keyframes "lds-dual-ring" {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.lds-dual-ring {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	&:after {
+		content: " ";
+		display: block;
+		width: 64px;
+		height: 64px;
+		border-radius: 50%;
+		border: 6px solid #fff;
+		border-color: $border_color_1;
+		animation: lds-dual-ring 1.2s linear infinite;
+	}
+}
+
+.center {
+  justify-self: center;
+  align-self: center;
+}
+
+.text-center{
+  text-align: center;
+}
