@@ -4,11 +4,11 @@ import logo from '../assests/images/Logo-andelBay-02.png'
 const navItems = [
   {
     caption: 'Pruébalo gratis',
-    href: 'https://handelbay.com'
+    href: 'https://handelbay.com/users/sign_up'
   },
   {
     caption: 'Ingresar',
-    href: 'https://handelbay.com'
+    href: 'https://handelbay.com/users/sign_in'
   }
 ]
 
