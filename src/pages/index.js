@@ -7,7 +7,7 @@ export default (props) => {
     <Layout>
       <section className="titles">
 				<p>
-					<span>Descubre</span> <br /> grandes alianzas {process.env.HOST}
+					<span>Descubre</span> <br /> grandes alianzas {process.env.MY_NAME}
 				</p>
 			</section>
       <LayoutSearch />
