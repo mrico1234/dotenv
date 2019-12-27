@@ -16,7 +16,7 @@ export default (props) => {
   
   return(
     <div className="result-container">
-      <img src={`${process.env.HOST}${company.logo.url}`} alt={`logo ${company.name}`} className="result-image" />
+      <img src={`http://107.170.25.142${company.logo.url}`} alt={`logo ${company.name}`} className="result-image" />
       <p className="result-title">{company.name}</p>
       <div className="result-container-text">
         <p className={`result-type ${companyType(company.type_user_companies)[1]}`}>{companyType(company.type_user_companies)[0]}</p>

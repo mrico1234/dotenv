@@ -14,7 +14,7 @@ export default (props) => {
   }
   return(
     <div className="result-container">
-			<img src={`${process.env.HOST}${proces.company.logo.url}`} alt={`logo ${proces.company.name}`}className="result-image" />
+			<img src={`http://107.170.25.142${proces.company.logo.url}`} alt={`logo ${proces.company.name}`}className="result-image" />
 			<p className="result-title">ID PROCESO: {process.id}</p>
 			<div className="result-container-text">
 				<p className="result-text">{proces.description}</p>
