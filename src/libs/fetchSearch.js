@@ -18,9 +18,9 @@ export default async function  (query,type) {
   // }
 
   if (type === '1'){
-    url = `http://107.170.25.142/static_resources/api/v1/business_search.json?limit=10&page=1&word=${query}`
+    url = `https://testing.handelbay.com/static_resources/api/v1/business_search.json?limit=10&page=1&word=${query}`
   }else{
-    url = `http://107.170.25.142/static_resources/api/v1/business_search/processes?limit=5&page=2&term=${query}`
+    url = `https://testing.handelbay.com/static_resources/api/v1/business_search/processes?limit=5&page=2&term=${query}`
   }
   //const response = await fetch(`http://localhost:3000/static_resources/api/v1/business_search.json?limit=10&page=1&word=${query}`)
   const response = await fetch(url)
