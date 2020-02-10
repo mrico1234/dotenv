@@ -1,35 +1,32 @@
 .Header {
-	@include grid;
-	@include max-width(1000px);
-	grid-template-columns: 1fr 2fr;
-	justify-content: center;
-	margin-top: $space;
-	& nav {
-		justify-content: end;
-		& ul {
-			margin: 0;
-			& li {
-				margin-top: $space;
-				list-style: none;
-				& a{
-					text-decoration: none;
-				
+	background: $green-header;
+	height: 90px;
+	& .show{
+		background: $green-header;
+		padding: $space * 3;
+		margin: 0
+	}
+	& .Header-container {
+		@include max-width(90%);
+		& .nav-link{
+			color: $white-brand !important
+		}
+		& .downs{
+			& .show{
+				padding: 0
+			}
+			& .dropdown-menu{
+				& .dropdown-item.active{
+					background: none
 				}
 			}
 		}
 	}
-	@include respond-to(1024px) {
-		@include max-width(90%);
-		margin-top: $space;
-	}
-	@include respond-to(480px) {
-		@include max-width(95%);
-		margin-top: $space;
-	}
 }
 
 .Header-logo {
-	height: 60px;
+	justify-self: end;
+	height: 50px;
 	@include respond-to(1024px) {
 		height: 40px;
 	}
@@ -42,33 +39,35 @@
 }
 
 .Header-button {
+	@include respond-to(990px) {
+		margin-bottom: $space
+	}
 	@include button-rounder;
-	padding: $space;
+	padding: $space $space * 3;
 	background-color: $blue-brand;
 	color: white;
-	font-weight: $medium;
+	font-weight: $bolder;
 	font-size: $h4;
-	outline: none;
+	outline: none !important;
 	cursor: pointer;
 	@include respond-to(480px) {
 		padding: $space / 2;
 		font-size: $p;
 	}
-
-
 }
 
-.Header-button2{
+.Header-button2 {
 	@include button-rounder;
-	padding: $space;
+	background: transparent;
+	padding: $space $space * 3;
 	border: 1px solid $blue-brand;
 	margin-left: $space;
 	font-size: $h4;
 	color: $blue-brand;
-	font-weight: $medium;
-	outline: none;
+	font-weight: $light;
+	outline: none !important;
 	cursor: pointer;
-	@include respond-to(480px){
+	@include respond-to(480px) {
 		padding: $space / 2;
 		margin-left: $space / 2;
 		font-size: $p;
