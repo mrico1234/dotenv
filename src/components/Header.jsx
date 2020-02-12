@@ -35,24 +35,24 @@ export default (props) => {
     // </header>
     <header className="Header">
       <Navbar collapseOnSelect expand="lg" className="Header-container">
-        <Navbar.Brand href="#home"><img src={logo} alt="logo handelbay" className="Header-logo" /></Navbar.Brand>
+        <Navbar.Brand href="https://handelbay.com/"><img src={logo} alt="logo handelbay" className="Header-logo" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto downs">
-            <Nav.Link href="#">INICIO</Nav.Link>
+            <Nav.Link href="#" target='_blank' rel="noopener noreferrer">INICIO</Nav.Link>
             <NavDropdown title="EMPRESAS" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#">Compradores</NavDropdown.Item>
-              <NavDropdown.Item href="#">Proveedores</NavDropdown.Item>
-              <NavDropdown.Item href="#">Dual</NavDropdown.Item>
+              <NavDropdown.Item href="https://handelbay.com/compradores" target='_blank' rel="noopener noreferrer">Compradores</NavDropdown.Item>
+              <NavDropdown.Item href="https://handelbay.com/proveedores" target='_blank' rel="noopener noreferrer">Proveedores</NavDropdown.Item>
+              <NavDropdown.Item href="https://handelbay.com/dual" target='_blank' rel="noopener noreferrer">Dual</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#">TARIFAS</Nav.Link>
-            <Nav.Link href="#">¿POR QUÉ HANDELBAY?</Nav.Link>
-            <Nav.Link href="#">ALIANZAS</Nav.Link>
-            <Nav.Link href="#">BLOG</Nav.Link>
+            <Nav.Link href="https://handelbay.com/tarifas" target='_blank' rel="noopener noreferrer">TARIFAS</Nav.Link>
+            <Nav.Link href="https://handelbay.com/porquehandelbay" target='_blank' rel="noopener noreferrer">¿POR QUÉ HANDELBAY?</Nav.Link>
+            <Nav.Link href="https://handelbay.com/alianzas" target='_blank' rel="noopener noreferrer">ALIANZAS</Nav.Link>
+            <Nav.Link href="https://handelbay.com/blog" target='_blank' rel="noopener noreferrer">BLOG</Nav.Link>
           </Nav>
           <Nav>
-            <button href="#" className="Header-button">PRUÉBALO GRATIS</button>
-            <button href="#" className="Header-button2">INGRESAR</button>
+            <a href="https://handelbay.com/users/sign_up" className="Header-button" target='_blank' rel="noopener noreferrer">PRUÉBALO GRATIS</a>
+            <a href="https://handelbay.com/users/sign_in" className="Header-button2" target='_blank' rel="noopener noreferrer">INGRESAR</a>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

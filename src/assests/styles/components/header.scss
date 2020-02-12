@@ -23,6 +23,9 @@
         }
       }
     }
+    & .navbar-nav:last-child a {
+      text-decoration: none !important;
+    }
   }
 }
 
