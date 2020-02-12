@@ -1,102 +1,104 @@
 .Header {
-	background: $green-header;
-	height: 90px;
-	& .show{
-		background: $green-header;
-		padding: $space * 3;
-		margin: 0
-	}
-	& .Header-container {
-		@include max-width(90%);
-		& .nav-link{
-			color: $white-brand !important
-		}
-		& .downs{
-			& .show{
-				padding: 0
-			}
-			& .dropdown-menu{
-				& .dropdown-item.active{
-					background: none
-				}
-			}
-		}
-	}
+  background: $green-header;
+
+  & .show {
+    background: $green-header;
+    padding: $space * 3;
+    margin: 0;
+  }
+  & .Header-container {
+    @include max-width(85%);
+    & .nav-link {
+      color: $white-brand !important;
+      font-size: 14px;
+      font-weight: $bolder;
+    }
+    & .downs {
+      & .show {
+        padding: 0;
+      }
+      & .dropdown-menu {
+        & .dropdown-item.active {
+          background: none;
+        }
+      }
+    }
+  }
 }
 
 .Header-logo {
-	justify-self: end;
-	height: 50px;
-	@include respond-to(1024px) {
-		height: 40px;
-	}
+  justify-self: end;
+  height: 45px;
+  @include respond-to(1024px) {
+    height: 40px;
+  }
 }
 
 .Header-buttons {
-	display: grid;
-	grid-template-columns: auto auto;
-	justify-content: end;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: end;
 }
 
 .Header-button {
-	@include respond-to(990px) {
-		margin-bottom: $space
-	}
-	@include button-rounder;
-	padding: $space $space * 3;
-	background-color: $blue-brand;
-	color: white;
-	font-weight: $bolder;
-	font-size: $h4;
-	outline: none !important;
-	cursor: pointer;
-	@include respond-to(480px) {
-		padding: $space / 2;
-		font-size: $p;
-	}
+  @include respond-to(990px) {
+    margin-bottom: $space;
+  }
+  @include button-rounder;
+  padding: $space * 0.7 $space * 1.2;
+  background-color: $blue-brand;
+  color: white;
+  font-weight: $bolder;
+  font-size: $h4;
+  outline: none !important;
+  cursor: pointer;
+  @include respond-to(480px) {
+    padding: $space / 2;
+    font-size: $p;
+  }
 }
 
 .Header-button2 {
-	@include button-rounder;
-	background: transparent;
-	padding: $space $space * 3;
-	border: 1px solid $blue-brand;
-	margin-left: $space;
-	font-size: $h4;
-	color: $blue-brand;
-	font-weight: $light;
-	outline: none !important;
-	cursor: pointer;
-	@include respond-to(480px) {
-		padding: $space / 2;
-		margin-left: $space / 2;
-		font-size: $p;
-	}
+  @include button-rounder;
+  background: transparent;
+  padding: $space * 0.7 $space * 1.2;
+  border: 1px solid $blue-brand;
+  margin-left: $space;
+  font-size: $h4;
+  color: $blue-brand;
+  font-weight: $light;
+  outline: none !important;
+  cursor: pointer;
+  @include respond-to(480px) {
+    padding: $space / 2;
+    margin-left: $space / 2;
+    font-size: $p;
+  }
 }
 
 .titles {
-	@include max-width(1000px);
-	margin-top: $space * 3;
-	margin-bottom: $space * 3;
-	& p {
-		font-size: $h1;
-		margin: 0;
-		color: $blue-brand;
-		& span {
-			font-weight: $bolder;
-		}
-	}
-	@include respond-to(1024px) {
-		@include max-width(90%);
-		margin-top: $space * 2;
-		margin-bottom: $space * 2;
-		& p {
-			font-size: $h2;
-		}
-	}
-	@include respond-to(480px) {
-		@include max-width(95%);
-		margin-top: $space;
-		margin-bottom: $space;
-	}
+  @include max-width(1000px);
+  margin-top: $space * 3;
+  margin-bottom: $space * 3;
+  & p {
+    font-size: $h1;
+    margin: 0;
+    color: $blue-brand;
+    & span {
+      font-weight: $bolder;
+    }
+  }
+  @include respond-to(1024px) {
+    @include max-width(90%);
+    margin-top: $space * 2;
+    margin-bottom: $space * 2;
+    & p {
+      font-size: $h2;
+    }
+  }
+  @include respond-to(480px) {
+    @include max-width(95%);
+    margin-top: $space;
+    margin-bottom: $space;
+  }
 }

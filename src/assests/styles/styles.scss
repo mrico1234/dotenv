@@ -1,25 +1,26 @@
-@import './tokens/colors.scss';
-@import './tokens/spacing.scss';
-@import './tokens/fonts';
-@import './base/color.scss';
-@import './base/fonts.scss';
-@import './base/spacing.scss';
-@import './base/mixins.scss';
+@import "./tokens/colors.scss";
+@import "./tokens/spacing.scss";
+@import "./tokens/fonts";
+@import "./base/color.scss";
+@import "./base/fonts.scss";
+@import "./base/spacing.scss";
+@import "./base/mixins.scss";
 
 body {
-	font-size: 16px;
-	margin: 0;
-	padding: 0;
-	background: $white-brand;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background: $white-brand;
+  font-family: $font;
 }
 
 // Components
-@import './components/header.scss';
-@import './components/Searching.scss';
-@import './components/selector.scss';
-@import './components/results.scss';
-@import './components/company.scss';
-@import './components/footer.scss';
+@import "./components/header.scss";
+@import "./components/Searching.scss";
+@import "./components/selector.scss";
+@import "./components/results.scss";
+@import "./components/company.scss";
+@import "./components/footer.scss";
 
 //@media screen and (max-width: 1024px)
 //@media screen and (max-width: 768px)

@@ -1,132 +1,136 @@
 .container-Searching {
-	@include max-width(1000px);
-	@include grid;
-	grid-template-areas: "searching  searching searching searching searching2 searching2 button";
-	gap: 10px;
+  @include max-width(1000px);
+  @include grid;
+  grid-template-areas: "searching  searching searching searching searching2 searching2 button";
+  gap: 10px;
 }
 
 .Searching {
-	@include grid;
-	grid-area: searching;
-	grid-template-columns: 40px 1fr;
-	gap: $space;
-	border-bottom: 2px solid gray;
-	& img {
-		align-self: end;
-	}
-	& input {
-		background: $white-brand;
-		font-size: $h1;
-		outline: 0;
-		border: none;
-		width: 100%;
-	}
+  @include grid;
+  grid-area: searching;
+  grid-template-columns: 40px 1fr;
+  gap: $space;
+  border-bottom: 2px solid gray;
+  & img {
+    align-self: end;
+  }
+  & input {
+    background: $white-brand;
+    font-size: $h1;
+    outline: 0;
+    border: none;
+    width: 100%;
+  }
 }
 
 .Searching-logo {
-	height: 40px;
+  height: 40px;
 }
 
 .Searching2 {
-	@include grid;
-	grid-area: searching2;
-	grid-template-columns: 1fr;
-	gap: $space;
-	border: none;
-	border-bottom: 2px solid gray;
-	/* & img {
+  @include grid;
+  grid-area: searching2;
+  grid-template-columns: 1fr;
+  gap: $space;
+  border: none;
+  border-bottom: 2px solid gray;
+  /* & img {
 		align-self: end;
 	} */
-	& select {
-		cursor: pointer;
-		align-self: end;
-		outline: 0;
-		border: none;
-		width: 100%;
-		font-size: $h3;
-		font-weight: $bolder;
-		background: none;
-	}
+  & select {
+    cursor: pointer;
+    align-self: end;
+    outline: 0;
+    border: none;
+    width: 100%;
+    font-size: $h3;
+    font-weight: $bolder;
+    background: none;
+  }
 }
 
 .Searchin-button {
-	grid-area: button;
-	padding-top: $space * 2;
-	padding-bottom: $space * 2;
-	padding-right: $space * 4;
-	padding-left: $space * 4;
-	border: 1px solid gray;
-	border-radius: $space;
-	background: none;
-	font-size: $h4;
-	font-weight: $bolder;
-	cursor: pointer;
+  grid-area: button;
+  padding-top: $space * 1.5;
+  padding-bottom: $space * 2;
+  padding-right: $space * 4;
+  padding-left: $space * 4;
+  border: 1px solid gray;
+  border-radius: $space;
+  background: none;
+  font-size: $h4;
+  font-weight: $bolder;
+  cursor: pointer;
+  height: 80%;
+  align-self: end;
 }
 
 .Searching-P {
-	@include max-width(1000px);
-	color: gray;
+  @include max-width(1000px);
+  color: gray;
 }
 
 @media screen and (max-width: 1024px) {
-	.container-Searching {
-		@include max-width(95%);
-		grid-template-areas: "searching searching searching searching searching2 searching2 searching2"
-			". button button button button . .";
-	}
-	.Searchin-button {
-		grid-area: button;
-		padding-top: $space;
-		padding-bottom: $space;
-		padding-right: $space * 2;
-		padding-left: $space * 2;
-	}
-	.Searching {
-		& input {
-			font-size: $h2;
-		}
-	}
-	.Searching-logo {
-		height: 30px;
-	}
-	.Searching2 {
-		& select {
-			font-size: $h4;
-		}
-	}
-	.Searching-P {
-		@include max-width(95%);
-		margin-top: $space * 2;
-		margin-bottom: $space * 2;
-	}
+  .container-Searching {
+    @include max-width(95%);
+    grid-template-areas:
+      "searching searching searching searching searching2 searching2 searching2"
+      ". button button button button . .";
+  }
+  .Searchin-button {
+    grid-area: button;
+    padding-top: $space;
+    padding-bottom: $space;
+    padding-right: $space * 2;
+    padding-left: $space * 2;
+  }
+  .Searching {
+    & input {
+      font-size: $h2;
+    }
+  }
+  .Searching-logo {
+    height: 30px;
+  }
+  .Searching2 {
+    & select {
+      font-size: $h4;
+    }
+  }
+  .Searching-P {
+    @include max-width(95%);
+    margin-top: $space * 2;
+    margin-bottom: $space * 2;
+  }
 }
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 480px) {
-	.container-Searching {
-		@include max-width(90%);
-		grid-template-areas: "searching searching searching searching searching searching searching"
-			". searching2 searching2 searching2 searching2 searching2 ."
-			"button button button button button button button";
-	}
-	.Searching {
-		& input {
-			font-size: $h3;
-		}
-	}
-	.Searching-logo {
-		height: 20px;
-	}
-	.Searching2 {
-		margin-top: $space;
-		margin-bottom: $space;
-		& select {
-			width: 80%;
-		}
-	}
-	.Searching-P {
-		@include max-width(90%);
-		margin-top: $space * 2;
-		margin-bottom: $space * 2;
-	}
+  .container-Searching {
+    @include max-width(90%);
+    grid-template-areas:
+      "searching searching searching searching searching searching searching"
+      ". searching2 searching2 searching2 searching2 searching2 ."
+      "button button button button button button button";
+  }
+  .Searching {
+    & input {
+      font-size: $h3;
+    }
+  }
+  .Searching-logo {
+    height: 20px;
+  }
+  .Searching2 {
+    margin-top: $space;
+    margin-bottom: $space;
+    & select {
+      width: 80%;
+    }
+  }
+  .Searching-P {
+    @include max-width(90%);
+    margin-top: $space * 2;
+    margin-bottom: $space * 2;
+  }
 }
