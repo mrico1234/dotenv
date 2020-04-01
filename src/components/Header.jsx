@@ -33,7 +33,7 @@ export default (props) => {
 		//     </ul>
 		//   </nav>
 		// </header>
-		<header className="Header">
+		<header className="Header shadow">
 			<Navbar collapseOnSelect expand="lg" className="Header-container">
 				<Navbar.Brand href="https://handelbay.com/">
 					<img src={logo} alt="logo handelbay" className="Header-logo" />
@@ -43,6 +43,7 @@ export default (props) => {
 					<Nav className="mr-auto downs">
 						<Nav.Link href="#" target="_blank" rel="noopener noreferrer">
 							INICIO
+							<span class="sr-only" />
 						</Nav.Link>
 						<NavDropdown title="EMPRESAS" id="collasible-nav-dropdown">
 							<NavDropdown.Item
@@ -69,6 +70,7 @@ export default (props) => {
 						</NavDropdown>
 						<Nav.Link href="https://handelbay.com/tarifas" target="_blank" rel="noopener noreferrer">
 							TARIFAS
+							<span class="sr-only" />
 						</Nav.Link>
 						<Nav.Link
 							href="https://handelbay.com/porquehandelbay"
@@ -76,12 +78,15 @@ export default (props) => {
 							rel="noopener noreferrer"
 						>
 							¿POR QUÉ HANDELBAY?
+							<span class="sr-only" />
 						</Nav.Link>
 						<Nav.Link href="https://handelbay.com/alianzas" target="_blank" rel="noopener noreferrer">
 							ALIANZAS
+							<span class="sr-only" />
 						</Nav.Link>
 						<Nav.Link href="https://handelbay.com/blog" target="_blank" rel="noopener noreferrer">
 							BLOG
+							<span class="sr-only" />
 						</Nav.Link>
 					</Nav>
 					<Nav>
