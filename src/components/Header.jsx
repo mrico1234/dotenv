@@ -34,13 +34,13 @@ export default (props) => {
 		//   </nav>
 		// </header>
 		<header className="Header shadow">
-			<Navbar collapseOnSelect expand="lg" className="Header-container container-fluid">
+			<Navbar collapseOnSelect expand="lg" className="Header-container container">
 				<Navbar.Brand href="https://handelbay.com/">
 					<img src={logo} alt="logo handelbay" className="Header-logo" />
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
-					<Nav className="mr-auto downs">
+					<Nav className="mr-auto downs float-left">
 						<Nav.Link className="active" href="#" target="_blank" rel="noopener noreferrer">
 							INICIO
 							<span class="sr-only" />
@@ -89,7 +89,7 @@ export default (props) => {
 							<span class="sr-only" />
 						</Nav.Link>
 					</Nav>
-					<Nav>
+					<Nav className="float-right">
 						<a
 							href="https://handelbay.com/users/sign_up"
 							className="Header-button"

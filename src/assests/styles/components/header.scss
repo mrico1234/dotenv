@@ -8,10 +8,6 @@
 		padding: $space * 3;
 		margin: 0;
 	}
-	& .container-fluid {
-		padding-left: 78px !important;
-		padding-right: 78px !important;
-	}
 	& .Header-container {
 		// @include max-width(87%);
 		& .nav-link {
