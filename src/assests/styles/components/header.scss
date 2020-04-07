@@ -1,19 +1,26 @@
 .Header {
+	& .navbar {
+		min-height: 75px;
+		padding: 0;
+	}
 	background: $green-header;
 	& .show {
-		background: $green-header;
 		padding: $space * 3;
 		margin: 0;
 	}
+	& .container-fluid {
+		padding-left: 78px !important;
+		padding-right: 78px !important;
+	}
 	& .Header-container {
-		@include max-width(80%);
+		// @include max-width(87%);
 		& .nav-link {
+			padding-right: 13px;
 			color: $white-brand !important;
 			font-size: 14px;
-			font-weight: $normal;
 		}
 		& .nav-link.active {
-			font-weight: $bolder;
+			font-family: $font-gotham-bold;
 			.sr-only {
 				position: inherit;
 				width: 45%;
@@ -26,7 +33,7 @@
 			}
 		}
 		& .nav-link:hover {
-			font-weight: $bolder;
+			font-family: $font-gotham-bold;
 		}
 		& .downs {
 			& .show {
@@ -57,7 +64,7 @@
 
 .Header-logo {
 	justify-self: end;
-	height: 45px;
+	width: 130px;
 	@include respond-to(1024px) {
 		height: 40px;
 	}
@@ -78,13 +85,11 @@
 		margin-bottom: $space;
 	}
 	@include button-rounder;
-	padding: $space * 0.7 $space * 1.2;
+	padding: 7px 12px;
 	background-color: $blue-brand;
 	color: white;
-	font-weight: $bolder;
-	font-size: $h4;
-	outline: none !important;
-	cursor: pointer;
+	font-family: $font-gotham-bold;
+	font-size: 12px;
 	@include respond-to(480px) {
 		padding: $space / 2;
 		font-size: $p;
@@ -98,14 +103,11 @@
 	}
 	@include button-rounder;
 	background: transparent;
-	padding: $space * 0.7 $space * 1.2;
+	padding: 7px 12px;
 	border: 1px solid $blue-brand;
-	margin-left: $space;
-	font-size: $h4;
+	margin-left: 8px;
+	font-size: 12px;
 	color: $blue-brand;
-	font-weight: $light;
-	outline: none !important;
-	cursor: pointer;
 	@include respond-to(480px) {
 		padding: $space / 2;
 		margin-left: $space / 2;
