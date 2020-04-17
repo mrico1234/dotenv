@@ -8,7 +8,7 @@
 .Searching {
   @include grid;
   grid-area: searching;
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: 40px 1fr 2fr;
   gap: $space;
   border-bottom: 2px solid gray;
   & img {
@@ -16,37 +16,17 @@
   }
   & input {
     background: $white-brand;
-    font-size: $h1;
+    font-size: 1.5em;
     outline: 0;
     border: none;
-    width: 100%;
+    width: 304%;
+    height: 43px;
+    margin-top: 14px;
   }
 }
 
 .Searching-logo {
   height: 40px;
-}
-
-.Searching2 {
-  @include grid;
-  grid-area: searching2;
-  grid-template-columns: 1fr;
-  gap: $space;
-  border: none;
-  border-bottom: 2px solid gray;
-  /* & img {
-		align-self: end;
-	} */
-  & select {
-    cursor: pointer;
-    align-self: end;
-    outline: 0;
-    border: none;
-    width: 100%;
-    font-size: $h3;
-    font-weight: $bolder;
-    background: none;
-  }
 }
 
 .Searchin-button {
@@ -57,17 +37,13 @@
   padding-left: $space * 4;
   border: 1px solid gray;
   border-radius: $space;
-  background: none;
-  font-size: $h4;
+  background: $blue-brand;
+  color: white;
+  font-size: 0.875em;
   font-weight: $bolder;
   cursor: pointer;
   height: 80%;
   align-self: end;
-}
-
-.Searching-P {
-  @include max-width(1000px);
-  color: gray;
 }
 
 @media screen and (max-width: 1024px) {
@@ -92,16 +68,6 @@
   .Searching-logo {
     height: 30px;
   }
-  .Searching2 {
-    & select {
-      font-size: $h4;
-    }
-  }
-  .Searching-P {
-    @include max-width(95%);
-    margin-top: $space * 2;
-    margin-bottom: $space * 2;
-  }
 }
 @media screen and (max-width: 768px) {
 }
@@ -120,17 +86,5 @@
   }
   .Searching-logo {
     height: 20px;
-  }
-  .Searching2 {
-    margin-top: $space;
-    margin-bottom: $space;
-    & select {
-      width: 80%;
-    }
-  }
-  .Searching-P {
-    @include max-width(90%);
-    margin-top: $space * 2;
-    margin-bottom: $space * 2;
   }
 }

@@ -7,7 +7,7 @@ export default (props) => {
     <Layout>
       <section className="titles">
 				<p>
-					<span>Descubre</span> <br /> grandes alianzas
+					<span>Descubre grandes alianzas</span>
 				</p>
 			</section>
       <LayoutSearch />

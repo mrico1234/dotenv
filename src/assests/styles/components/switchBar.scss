@@ -1,0 +1,37 @@
+.container-menu {
+  @include max-width(60%);
+  background: $gray_light;
+  border: 1px solid $gray_light;;
+  @include button-rounder;
+  height: 2.2rem;
+  font-family: $font-gotham-bold;
+}
+
+.btn-menu-press {
+  padding-top: 4px;
+  border: 0px;
+  @include button-rounder;
+  color: white;
+  background: $blue-brand;
+  font-size: 0.875em;
+  font-weight: $bolder;
+  background-color: $buyer_color;
+  width: 97%;
+  height: 27px;
+  margin-top: 3px;
+  &:focus {
+    outline: 0px;
+  }
+}
+
+.btn-menu {
+  padding-top: 8px;
+  background: transparent;
+  border: 0px;
+  color: $blue-brand;
+  font-size: 0.875em;
+  font-weight: $bolder;
+  &:focus {
+    outline: 0px;
+  }
+}

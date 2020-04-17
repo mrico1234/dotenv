@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import logoFacebook from '../assests/images/logo-facebook.svg';
 import logoInstagram from '../assests/images/logo-instagram.svg';
@@ -7,7 +7,7 @@ import logoLinkedin from '../assests/images/logo-linkedin.svg';
 
 export default (props) => {
   return(
-    <Fragment>
+    <>
       <div className="footer-container-logos">
 				<a href="https://handelbay.com">
 					<img src={logoFacebook} alt="logoFacebook" height="30px" />
@@ -23,7 +23,6 @@ export default (props) => {
 				</a>
 			</div>
 			<p className="text-footer">2019 &copy; Todos los derechos reservados - Ignite Technologies S.A.S</p>
-
-    </Fragment>
+    </>
   )
 }

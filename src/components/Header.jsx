@@ -3,16 +3,16 @@ import React from 'react';
 import logo from '../assests/images/handelbay_logo_menu.png';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
-const navItems = [
-	{
-		caption: 'Pruébalo gratis',
-		href: 'https://handelbay.com/users/sign_up'
-	},
-	{
-		caption: 'Ingresar',
-		href: 'https://handelbay.com/users/sign_in'
-	}
-];
+// const navItems = [
+// 	{
+// 		caption: 'Pruébalo gratis',
+// 		href: 'https://handelbay.com/users/sign_up'
+// 	},
+// 	{
+// 		caption: 'Ingresar',
+// 		href: 'https://handelbay.com/users/sign_in'
+// 	}
+// ];
 
 export default (props) => {
 	return (
