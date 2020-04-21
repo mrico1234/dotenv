@@ -1,16 +1,15 @@
-import React, { useState } from "react"
-import { Row, Col } from "react-bootstrap"
+import React, { useState } from 'react'
+import { Row, Col } from 'react-bootstrap'
 
-const SwitchBar = ({selectValue, cleanSearchValue, handleInputChange}) => {
-  const [style, setStyle] = useState({ id: selectValue })
+const SwitchBar = ({ changeSwitchBar, switchbar }) => {
+  const [style, setStyle] = useState({ id: switchbar.type })
 
   const addClass = (value) => {
     setStyle({ id: value })
   }
 
   const changeType = (event) => {
-    cleanSearchValue()
-    handleInputChange(event)
+    changeSwitchBar(event)
     addClass(event.target.value)
   }
 

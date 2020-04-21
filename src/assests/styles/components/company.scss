@@ -1,13 +1,11 @@
 .result-container {
+  padding: 20px 0px 0px 0px !important;
+  border-radius: 20px;
   background: white;
-  @include grid;
   @include max-width(90%);
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "image title title button" "image text text button";
   column-gap: $space * 2;
   justify-content: start;
-  margin: $space 0;
-  margin-left: 2.5%;
+  margin-bottom: 10px;
   padding: $space * 2;
   @include shadow;
   & span {
@@ -23,7 +21,6 @@
   width: 180px;
   align-self: center;
   object-fit: contain;
-  grid-area: image;
 
   & img {
     height: 130px;
@@ -33,58 +30,6 @@
     height: 80px;
     width: 100px;
   }
-}
-
-.result-container-text {
-  grid-area: text;
-}
-
-.result-title {
-  grid-area: title;
-  font-size: $h2;
-  font-weight: $bolder;
-  color: $blue-brand;
-  margin: 0 0.5em 0.2em 0.5em;
-}
-
-.result-type {
-  font-size: $h3;
-  text-transform: uppercase;
-  color: $green-brand;
-  margin: 0.5em;
-}
-
-.result-text {
-  font-size: $h4;
-  margin: 0.5em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.result-buttons {
-  @include grid;
-  grid-template-columns: 1fr;
-  gap: $space;
-  align-self: center;
-
-  grid-area: button;
-  @include respond-to(1024px) {
-    grid-template: 1fr;
-  }
-  @include respond-to(768px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.result-button_add {
-  background-color: $green-brand;
-  font-size: $h3;
-  outline: none;
-  cursor: pointer;
-  color: $white-brand;
-  font-weight: $bolder;
-  padding: 0 $space;
 }
 
 .buyer {
@@ -110,4 +55,114 @@
 
 .bg_buyer {
   background: $buyer_color;
+}
+
+
+
+
+
+.info-image {
+  padding-left: 28px;
+}
+
+.business-name {
+  font-size: $h3 !important;
+  padding: 0px;
+  font-weight: $black;
+}
+
+.business-profile {
+  font-size: 16px !important;
+  font-weight: $bolder;
+  padding: 0px;
+  color: $provider_color;
+  margin-bottom: 9px;
+}
+
+.fields {
+  & .label-detail {
+    font-weight: $medium;
+    font-size: $h5;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  & .form-group {
+    margin-bottom: 0.313rem;
+  }
+  & p {
+    border: 1px solid $gray_light;
+    border-radius: 13px;
+    background: $gray_light;
+    margin-bottom: 0px;
+    & span, a, div {
+      font-size: $h5;
+      font-weight: $normal;
+    }
+  }
+}
+
+.mg-left {
+  margin-left: 18px;
+}
+
+.pd-rg {
+  padding-right: 20px !important;
+}
+
+.info-dates {
+  padding: 0px;
+  & div {
+    margin-bottom: 0.5rem;
+    font-size: 0.75em;
+  }
+  & p {
+    margin-bottom: 0rem;
+    & .green_HB {
+      font-weight: bold;
+      color: $buyer_color;
+      font-size: 1.28em;
+    }
+  }
+}
+
+.info-datails {
+  & p {
+    margin-bottom: 0rem;
+    font-size: $h5;
+  }
+}
+
+.show_more {
+  text-decoration: none !important;
+  min-width: 100%;
+  color: white;
+  font-weight: $medium;
+  border-bottom-left-radius: 21px;
+  border-bottom-right-radius: 21px;
+  height: 26px;
+  font-size: $h5;
+  padding-top: 2px !important;
+}
+
+.btn_sign_up_here {
+  background-color: $buyer_color;
+  border-radius: 18px;
+  margin-bottom: 16px;
+  & a {
+    text-decoration: none;
+    color: white;
+    font-size: $h5;
+    font-weight: $black;
+  }
+}
+
+.btn-link:hover {
+  color: white !important;
+}
+
+.truncate-input {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
