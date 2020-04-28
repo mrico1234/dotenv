@@ -13,7 +13,7 @@ const LayoutSearch = () => {
   const [search, setSearchBar] = useState("")
   const [consult, saveConsult] = useState(false)
   const [results, saveResults] = useState([])
-  const [page, savePage] = useState(1)
+  const [page, savePage] = useState(0)
   const [loading, changeLoader] = useState(false)
   const [noresults, setNoResults] = useState(false)
 
@@ -21,8 +21,8 @@ const LayoutSearch = () => {
     updateSwitchBar({ type: event.target.value })
     setSearchBar("")
     saveResults([])
-    savePage(1)
     setNoResults(false)
+    changeSwitchBarPage(event.target.value)
   }
 
   const changeSearchBar = (event) => {
@@ -31,13 +31,32 @@ const LayoutSearch = () => {
     savePage(1)
     setNoResults(false)
   }
-  
-  // Consume la api de secop cuando se carga la pagina
-  useEffect(() => {
-    switchbar.type === "3" ? saveConsult(true) : saveConsult(false)
-  }, [])
 
-  useEffect(() => {
+  // Permite incrementar la pagina (offset) cada vez q se hace scroll
+  const increasePage = () => {
+    return switchbar.type === "3" ? 20 : 1
+  }
+
+  // Cada vez que se switchea se reinicia el value de la pagina 
+  const changeSwitchBarPage = (type) => {
+    type === "3" ? savePage(0) : savePage(1)
+  }
+
+  // Almacena los resultados en el sessionStorage
+  const setSessionStorage = () => {
+    if ( results.length > 0 && (sessionStorage.getItem("companyData") === null || sessionStorage.getItem("processData") === null || sessionStorage.getItem("secopData") === null) ) {
+      if (switchbar.type === "1" && sessionStorage.getItem("companyData") === null) {
+        sessionStorage.setItem("companyData", JSON.stringify(results))
+      } else if (switchbar.type === "2" && sessionStorage.getItem("processData") === null) {
+        sessionStorage.setItem("processData", JSON.stringify(results))
+      } else if (switchbar.type === "3" && sessionStorage.getItem("secopData") === null) {
+        sessionStorage.setItem("secopData", JSON.stringify(results))
+      }
+    }
+  }
+
+  // Cada vez se switchea trae los resultados del sessionStorage para mostrarlos en las tarjetas
+  const getSessionStorage = () => {
     if ( search === "" ) {
       let records;
       if (switchbar.type === "1" && sessionStorage.getItem("companyData") !== null) {
@@ -50,12 +69,23 @@ const LayoutSearch = () => {
         saveConsult(true)
       }
       if (records) {
-        savePage(page+1)
+        savePage(page+increasePage())
         saveResults(records)
       } 
     }
+  }
+
+  // Por defecto ejecuta la consulta de la api de SECOP
+  useEffect(() => {
+    switchbar.type === "3" ? saveConsult(true) : saveConsult(false)
+  }, [])
+
+  useEffect(() => {
+    // changeSwitchBarPage()
+    getSessionStorage()
   }, [switchbar])
 
+  // Consume la api de secop cuando se carga la pagina
   useEffect(() => {
     const consumeApi = async () => {
       if (consult) {
@@ -66,7 +96,7 @@ const LayoutSearch = () => {
           response = response.length === 0 ? "" : response
           response ? setNoResults(false) : setNoResults(true)
           saveResults([...results, response])
-          savePage(page+1)
+          savePage(page+increasePage())
         } catch (error) {
           setError(true)
         }
@@ -78,15 +108,7 @@ const LayoutSearch = () => {
   }, [consult])
 
   useEffect(() => {
-    if ( results.length > 0 && (sessionStorage.getItem("companyData") === null || sessionStorage.getItem("processData") === null || sessionStorage.getItem("secopData") === null) ) {
-      if (switchbar.type === "1" && sessionStorage.getItem("companyData") === null) {
-        sessionStorage.setItem("companyData", JSON.stringify(results))
-      } else if (switchbar.type === "2" && sessionStorage.getItem("processData") === null) {
-        sessionStorage.setItem("processData", JSON.stringify(results))
-      } else if (switchbar.type === "3" && sessionStorage.getItem("secopData") === null) {
-        sessionStorage.setItem("secopData", JSON.stringify(results))
-      }
-    }
+    setSessionStorage()
     if (results.length >= 2) {
       let records
       records = results[1] ? results[0].concat(results[1]) : results[0]
@@ -114,18 +136,17 @@ const LayoutSearch = () => {
             <p>Un total de <span className="number-results">{results[0] ? results[0].length : 0}</span> {switchbar.type === "1" ? "empresas" : "procesos"}</p>
           }
         </div>
-        {loading ? <Loader /> : ""}
+        {loading ? <Loader /> : null}
         {results[0] ? (
           <SearchResults results={results} switchbar={switchbar} saveConsult={saveConsult}
           />
         ) : (
           search ? "" : <div className="results-container_result text-center"></div>
         )}
-        {noresults ? <NoResults message="No hay resultados." /> : ""}
-        
+        <NoResults message="No hay resultados." noresults={noresults} results={results} />
       </div>
     </>
   )
 }
- 
+
 export default LayoutSearch;

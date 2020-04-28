@@ -19,7 +19,7 @@ const InfiniteScrollComponent = ({ results, switchbar, inputEmpty, saveConsult }
         ? results[0].map(data => (
           <SourceData results={data} switchbar={switchbar} key={data.id} inputEmpty={inputEmpty} />
         ))
-        : "kkkk"
+        : ""
       }
     </InfiniteScroll>
   );

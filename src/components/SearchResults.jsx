@@ -4,7 +4,7 @@ import InfiniteScrollComponent from './InfiniteScrollComponent'
 export default ({ results, page, switchbar, saveConsult }) => {
   
   const inputEmpty = (value) => {
-    if (!value || value === "ND") {
+    if (!value || value === "ND" || value === "-1" || value === "No Definido" ) {
       return "Sin información"
     } else if (value) {
       return value

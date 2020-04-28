@@ -1,6 +1,6 @@
 .container-results {
 	@include max-width(1000px);
-	margin-top: $space * 3;
+	margin-top: $space * 2;
 	display: grid;
 }
 
@@ -8,6 +8,10 @@
 	@include grid;
 	grid-template-columns: 1fr 1fr;
 	justify-content: space-between;
+	& p {
+		font-size: $h5;
+		color: #707570;
+	}
 }
 
 .number-results {
@@ -23,6 +27,9 @@
 .results-container_result {
 	height: 70vh;
 	overflow: auto;
+	& .infinite-scroll-component  {
+		overflow-x: hidden !important;
+	}
 }
 
 @media screen and (max-width: 1024px) {
@@ -34,6 +41,10 @@
 @media screen and (max-width: 768px) {
 	.container-results {
 		@include max-width(95%);
+	}
+
+	.one-row {
+		font-size: 0.688rem;
 	}
 }
 

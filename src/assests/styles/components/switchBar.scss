@@ -3,12 +3,17 @@
   background: $gray_light;
   border: 1px solid $gray_light;;
   @include button-rounder;
-  height: 2.2rem;
+  height: 33.6px;
   font-family: $font-gotham-bold;
 }
 
+.contaner-option {
+  height: 33.6px;
+  margin: 0px 3px;
+}
+
 .btn-menu-press {
-  padding-top: 4px;
+  margin: 2px 0px;
   border: 0px;
   @include button-rounder;
   color: white;
@@ -17,21 +22,39 @@
   font-weight: $bolder;
   background-color: $buyer_color;
   width: 97%;
-  height: 27px;
-  margin-top: 3px;
+  height: 28px;
+  line-height: 100%;
   &:focus {
     outline: 0px;
   }
 }
 
 .btn-menu {
-  padding-top: 8px;
+  margin: 2px 0px;
   background: transparent;
   border: 0px;
   color: $blue-brand;
   font-size: 0.875em;
   font-weight: $bolder;
+  height: 28px;
+  line-height: 100%;
   &:focus {
     outline: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+	.container-menu {
+		@include max-width(95%);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .btn-menu-press {
+    font-size: 11px;
+  }
+
+  .btn-menu {
+    font-size: 11px;
   }
 }

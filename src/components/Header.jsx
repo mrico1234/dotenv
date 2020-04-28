@@ -41,9 +41,9 @@ export default (props) => {
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="mr-auto downs float-left">
-						<Nav.Link className="active" href="#" target="_blank" rel="noopener noreferrer">
+						<Nav.Link href="#" target="_blank" rel="noopener noreferrer">
 							INICIO
-							<span class="sr-only" />
+							<span className="sr-only" />
 						</Nav.Link>
 						<NavDropdown title="EMPRESAS" id="collasible-nav-dropdown">
 							<NavDropdown.Item
@@ -70,7 +70,7 @@ export default (props) => {
 						</NavDropdown>
 						<Nav.Link href="https://handelbay.com/tarifas" target="_blank" rel="noopener noreferrer">
 							TARIFAS
-							<span class="sr-only" />
+							<span className="sr-only" />
 						</Nav.Link>
 						<Nav.Link
 							href="https://handelbay.com/porquehandelbay"
@@ -78,15 +78,15 @@ export default (props) => {
 							rel="noopener noreferrer"
 						>
 							¿POR QUÉ HANDELBAY?
-							<span class="sr-only" />
+							<span className="sr-only" />
 						</Nav.Link>
 						<Nav.Link href="https://handelbay.com/alianzas" target="_blank" rel="noopener noreferrer">
 							ALIANZAS
-							<span class="sr-only" />
+							<span className="sr-only" />
 						</Nav.Link>
 						<Nav.Link href="https://handelbay.com/blog" target="_blank" rel="noopener noreferrer">
 							BLOG
-							<span class="sr-only" />
+							<span className="sr-only" />
 						</Nav.Link>
 					</Nav>
 					<Nav className="float-right">

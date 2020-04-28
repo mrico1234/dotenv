@@ -8,7 +8,7 @@
 .Searching {
   @include grid;
   grid-area: searching;
-  grid-template-columns: 40px 1fr 2fr;
+  grid-template-columns: 33px 1fr 2fr;
   gap: $space;
   border-bottom: 2px solid gray;
   & img {
@@ -16,7 +16,7 @@
   }
   & input {
     background: $white-brand;
-    font-size: 1.5em;
+    font-size: $h3;
     outline: 0;
     border: none;
     width: 304%;
@@ -26,7 +26,7 @@
 }
 
 .Searching-logo {
-  height: 40px;
+  height: 33px;
 }
 
 .Searchin-button {
@@ -48,43 +48,27 @@
 
 @media screen and (max-width: 1024px) {
   .container-Searching {
-    @include max-width(95%);
-    grid-template-areas:
-      "searching searching searching searching searching2 searching2 searching2"
-      ". button button button button . .";
+    @include max-width(90%);
+    grid-template-areas: "searching  searching searching searching button";
+  }
+
+  .Searching-logo {
+    height: 25px;
+  }
+  .Searching {
+    gap: 0;
+    & input {
+      font-size: $h5;
+      height: 27px;
+      width: 300%
+    }
   }
   .Searchin-button {
     grid-area: button;
-    padding-top: $space;
+    padding-top: 6px;
     padding-bottom: $space;
-    padding-right: $space * 2;
-    padding-left: $space * 2;
-  }
-  .Searching {
-    & input {
-      font-size: $h2;
-    }
-  }
-  .Searching-logo {
-    height: 30px;
-  }
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 480px) {
-  .container-Searching {
-    @include max-width(90%);
-    grid-template-areas:
-      "searching searching searching searching searching searching searching"
-      ". searching2 searching2 searching2 searching2 searching2 ."
-      "button button button button button button button";
-  }
-  .Searching {
-    & input {
-      font-size: $h3;
-    }
-  }
-  .Searching-logo {
-    height: 20px;
+    padding-right: $space;
+    padding-left: $space;
+    height: 76%;
   }
 }

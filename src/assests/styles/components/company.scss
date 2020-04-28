@@ -5,8 +5,7 @@
   @include max-width(90%);
   column-gap: $space * 2;
   justify-content: start;
-  margin-bottom: 10px;
-  padding: $space * 2;
+  margin-bottom: 22px;
   @include shadow;
   & span {
     font-weight: $bolder;
@@ -17,18 +16,24 @@
 }
 
 .result-image {
-  height: 130px;
-  width: 180px;
+  height: 120px;
+  width: 170px;
   align-self: center;
   object-fit: contain;
 
-  & img {
-    height: 130px;
-    width: 180px;
+  @media screen and (max-width: 576px) {
+    height: 70px;
+    width: 80px;
   }
-  @include respond-to(768px) {
-    height: 80px;
-    width: 100px;
+
+  @media screen and (min-width: 768px) {
+    height: 100px;
+    width: 130px;
+  }
+
+  @media screen and (min-width: 960px) {
+    height: 120px;
+    width: 170px;
   }
 }
 
@@ -56,10 +61,6 @@
 .bg_buyer {
   background: $buyer_color;
 }
-
-
-
-
 
 .info-image {
   padding-left: 28px;
@@ -95,19 +96,12 @@
     border-radius: 13px;
     background: $gray_light;
     margin-bottom: 0px;
+    line-height: 17px;
     & span, a, div {
       font-size: $h5;
       font-weight: $normal;
     }
   }
-}
-
-.mg-left {
-  margin-left: 18px;
-}
-
-.pd-rg {
-  padding-right: 20px !important;
 }
 
 .info-dates {
@@ -165,4 +159,73 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.buyer-process {
+  & span {
+    font-size: $p;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .result-container {
+    padding: 10px 0px 0px 0px !important;
+  }
+  .fields {
+    & .label-detail {
+      font-size: $p;
+    }
+    & p {
+      & span, a, div {
+        font-size: 0.75em;
+      }
+    }
+  }
+  .size-id-secop {
+    font-size: $small !important;
+  }
+
+  .info-dates {
+    height: fit-content;
+    & div {
+      font-size: $small;
+    }
+  }
+
+  // PROCESS
+  .info-image {
+    padding-left: 0.938em;
+  }
+
+  .info-datails {
+    & p {
+      font-size: $p;
+    }
+  }
+
+  .btn_sign_up_here {
+    & a {
+      font-size: $p;
+    }
+  }
+
+  // COMPANIES
+  .business-name {
+    font-size: 1em !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .fields {
+    & p {
+      border: none;
+      background: transparent;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .green_HB {
+    font-size: 0.688em !important;
+  }
 }
