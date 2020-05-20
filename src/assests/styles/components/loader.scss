@@ -1,7 +1,7 @@
 @import '../tokens/colors.scss';
 $border_color_1: $green_brand transparent $green_brand transparent;
 
-@keyframes "lds-dual-ring" {
+@keyframes lds-dual-ring {
 	0% {
 		transform: rotate(0deg);
 	}
@@ -10,6 +10,7 @@ $border_color_1: $green_brand transparent $green_brand transparent;
 	}
 }
 .lds-dual-ring {
+	padding: 0px 8px 0px 12px;
 	display: inline-block;
 	width: 80px;
 	height: 80px;

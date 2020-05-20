@@ -1,7 +1,9 @@
-// Formatea la estrucutura de una fecha pasada - formato resultante: 22 abr. 2020
+// Formatea la estructura de una fecha pasada - formato resultante: 22 abr. 2020
 export function datesProcess(value) {
+  let t
   let date
-  date = new Date(value)
+  t = value.split(/[- : T]/);
+  date = new Date(t[0], t[1]-1, t[2], t[3], t[4]);
   return new Intl.DateTimeFormat('es', {year: 'numeric', month: 'short', day: '2-digit'}).format(date)
 }
 

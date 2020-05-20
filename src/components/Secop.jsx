@@ -37,10 +37,10 @@ const Secop = ({process, inputEmpty}) => {
       <Row>
 
         <Row className="col-12 col-sm-12">
-          <Col xs="8" sm="9" className="fields d-block d-sm-block d-md-none ml-3 ml-sm-0">
+          <Col xs="8" sm="8" className="fields d-block d-sm-block d-md-none ml-3">
             <Form.Group as={Row}>
-              <p className="ml-3 p-0 px-sm-3"><span><strong>{inputEmpty(process.referencia_del_proceso)}</strong></span></p>
-              <p className="col-10 ml-3 p-0 px-sm-3 size-id-secop"><strong>ID proceso</strong></p>
+              <p className="ml-3 p-0"><span><strong>{inputEmpty(process.referencia_del_proceso)}</strong></span></p>
+              <label className="col-10 ml-3 p-0 size-id-secop"><strong>ID proceso</strong></label>
             </Form.Group>
           </Col>
 
@@ -62,15 +62,15 @@ const Secop = ({process, inputEmpty}) => {
           </Form.Group>
           <Form.Group as={Row}>
             <Form.Label column xs="10" sm="10" md="3" className="label-detail">Nombre del proceso</Form.Label>
-            <p className={expand ? "col-10 col-sm-11 col-md-8 ml-3 p-0 p-sm-0 px-md-3" : "col-10 col-sm-11 col-md-8 ml-3 p-0 p-sm-0 px-md-3 truncate-input"}><span>{inputEmpty(process.nombre_del_procedimiento)}</span></p>
+            <p className={expand ? "col-10 col-sm-10 col-md-8 ml-3 p-0 p-sm-0 px-md-3" : "col-10 col-sm-10 col-md-8 ml-3 p-0 p-sm-0 px-md-3 truncate-input"}><span>{inputEmpty(process.nombre_del_procedimiento)}</span></p>
           </Form.Group>
           <Form.Group as={Row}>
             <Form.Label column xs="10" sm="10" md="3" className="label-detail">Entidad compradora</Form.Label>
-            <p className="col-10 col-sm-11 col-md-8 ml-3 p-0 p-sm-0 px-md-3"><span>{inputEmpty(process.entidad)}</span></p>
+            <p className="col-10 col-sm-10 col-md-8 ml-3 p-0 p-sm-0 px-md-3"><span>{inputEmpty(process.entidad)}</span></p>
           </Form.Group>
           <Form.Group as={Row}>
             <Form.Label column xs="10" sm="10" md="3" className="label-detail">Código UNSPSC</Form.Label>
-            <p className="col-md-8 ml-3 p-0 p-sm-0 px-md-3"><span>{inputEmpty(process.codigo_principal_de_categoria).replace("V1.", "")}</span></p>
+            <p className="col-sm-10 col-md-8 ml-3 p-0 p-sm-0 px-md-3"><span>{inputEmpty(process.codigo_principal_de_categoria).replace("V1.", "")}</span></p>
           </Form.Group>
         </Col>
 
@@ -94,19 +94,19 @@ const Secop = ({process, inputEmpty}) => {
                 <Col md="9" className="fields ml-3 ml-md-4 ml-xl-5">
                   <Form.Group as={Row}>
                     <Form.Label column xs="10" sm="10" md="3" className="label-detail">Ubicación</Form.Label>
-                    <p className="col-md-8 ml-3 p-0 p-sm-0 px-md-3"><span>{inputEmpty(process.ciudad_entidad)} - {inputEmpty(process.departamento_entidad)}</span></p>
+                    <p className="col-sm-10 col-md-8 ml-3 p-0 p-sm-0 px-md-3"><span>{inputEmpty(process.ciudad_entidad)} - {inputEmpty(process.departamento_entidad)}</span></p>
                   </Form.Group>
                   <Form.Group as={Row}>
                     <Form.Label column xs="10" sm="10" md="3" className="label-detail">Valor del contrato</Form.Label>
-                    <p className="col-md-5 ml-3 p-0 p-sm-0 px-md-3"><span>{formatterCurrency(inputEmpty(process.precio_base))}</span></p>
+                    <p className="col-sm-10 col-md-5 ml-3 p-0 p-sm-0 px-md-3"><span>{formatterCurrency(inputEmpty(process.precio_base))}</span></p>
                   </Form.Group>
                   <Form.Group as={Row}>
                     <Form.Label column xs="10" sm="10" md="3" className="label-detail">Descripción</Form.Label>
-                    <p className="col-10 col-sm-11 col-md-8 ml-3 p-0 p-sm-0 px-md-3"><span>{inputEmpty(process.descripci_n_del_procedimiento)}</span></p>
+                    <p className="col-10 col-sm-10 col-md-8 ml-3 p-0 p-sm-0 px-md-3"><span>{inputEmpty(process.descripci_n_del_procedimiento)}</span></p>
                   </Form.Group>
                   <Form.Group as={Row}>
                     <Form.Label column xs="10" sm="10" md="3" className="label-detail">Tipo de contratación</Form.Label>
-                    <p className="col-10 col-sm-11 col-md-8 ml-3 p-0 p-sm-0 px-md-3"><span>{inputEmpty(process.tipo_de_contrato)}</span></p>
+                    <p className="col-10 col-sm-10 col-md-8 ml-3 p-0 p-sm-0 px-md-3"><span>{inputEmpty(process.tipo_de_contrato)}</span></p>
                   </Form.Group>
                   <Form.Group as={Row}>
                     <Form.Label column xs="10" sm="10" md="3" className="label-detail">Abrir en SECOP</Form.Label>

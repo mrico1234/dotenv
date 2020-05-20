@@ -16,8 +16,6 @@
 }
 
 .result-image {
-  height: 120px;
-  width: 170px;
   align-self: center;
   object-fit: contain;
 
@@ -25,7 +23,10 @@
     height: 70px;
     width: 80px;
   }
-
+  @media screen and (min-width: 577px) {
+    height: 80px;
+    width: 110px;
+  }
   @media screen and (min-width: 768px) {
     height: 100px;
     width: 130px;
@@ -163,7 +164,7 @@
 
 .buyer-process {
   & span {
-    font-size: $p;
+    font-size: 1.2em;
   }
 }
 
@@ -182,7 +183,7 @@
     }
   }
   .size-id-secop {
-    font-size: $small !important;
+    font-size: 11px !important;
   }
 
   .info-dates {
@@ -194,7 +195,7 @@
 
   // PROCESS
   .info-image {
-    padding-left: 0.938em;
+    padding-left: 15px;
   }
 
   .info-datails {
@@ -215,7 +216,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 576px) {
   .fields {
     & p {
       border: none;
@@ -226,6 +227,6 @@
 
 @media screen and (max-width: 576px) {
   .green_HB {
-    font-size: 0.688em !important;
+    font-size: 1.1em !important;
   }
 }
