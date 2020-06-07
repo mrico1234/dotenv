@@ -17,9 +17,9 @@ export default async function  (query, type, page) {
   //   url = `${process.env.HOST}/static_resources/api/v1/business_search/processes?limit=5&page=2&term=${query}`
   // }
   if (type === '1'){
-    url = query ? `https://testing.handelbay.com/static_resources/api/v1/business_search.json?limit=20&page=${page}&word=${query}` : `https://testing.handelbay.com/static_resources/api/v1/business_search.json?limit=20&page=${page}`
+    url = query ? `https://app.handelbay.com/static_resources/api/v1/business_search.json?limit=20&page=${page}&word=${query}` : `https://app.handelbay.com/static_resources/api/v1/business_search.json?limit=20&page=${page}`
   } else if (type === '2') {
-    url = query ? `https://testing.handelbay.com/static_resources/api/v1/business_search/processes?limit=20&page=${page}&term=${query}` : `https://testing.handelbay.com/static_resources/api/v1/business_search/processes?limit=20&page=${page}`
+    url = query ? `https://app.handelbay.com/static_resources/api/v1/business_search/processes?limit=20&page=${page}&term=${query}` : `https://app.handelbay.com/static_resources/api/v1/business_search/processes?limit=20&page=${page}`
   } else {
     let f = new Date();
     let fecha = f.getFullYear()+ "-" + (f.getMonth() +1) + "-" +f.getDate()

@@ -1,5 +1,6 @@
 // Formatea la estructura de una fecha pasada - formato resultante: 22 abr. 2020
 export function datesProcess(value) {
+  if (!value) return null;
   let t
   let date
   t = value.split(/[- : T]/);

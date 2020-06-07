@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { Row } from 'react-bootstrap'
 
 const SwitchBar = ({ changeSwitchBar, switchbar }) => {
+
+  // console.log(`Esta es la prueba de la variable de entorno${prueba}`)
+
   const [style, setStyle] = useState({ id: switchbar.type })
 
   const addClass = (value) => {
@@ -18,7 +21,8 @@ const SwitchBar = ({ changeSwitchBar, switchbar }) => {
       <Row className="text-center contaner-option">
         <button name="type" value="1" className={style.id === "1"? "btn-menu-press col-4" : "btn-menu col-4"} onClick={changeType}>Empresas</button>
         <button name="type" value="2" className={style.id === "2"? "btn-menu-press col-4" : "btn-menu col-4"} onClick={changeType}>Procesos HandelBay</button>
-        <button name="type" value="3" className={style.id === "3"? "btn-menu-press col-4" : "btn-menu col-4"} onClick={changeType}>Secop II</button>
+        <button name="type" value="3" className={style.id === "3"? "btn-menu-press col-4" : "btn-menu col-4"} onClick={changeType}>Secop II {process.env.PRUEBA_VALOR}</button>
+        <button>---{process.env.PRUEBA_VALOR}---</button>
       </Row>
     </div>
    );
